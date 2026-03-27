@@ -2,12 +2,9 @@ package com.commerce;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Product> products = new ArrayList<>();
+        List<Product> products = new ArrayList<Product>();
 
         Product product1 = new Product("Galaxy S25", 1200000, "최신 안드로이드 스마트폰", 30);
         Product product2 = new Product("iPhone 16", 1350000, "Apple의 최신 스마트폰", 15);
@@ -19,16 +16,8 @@ public class Main {
         products.add(product3);
         products.add(product4);
 
-        System.out.println("[ 실시간 커머스 플랫폼 - 전자제품 ]");
-        while (true) {
-            for (int i = 0; i < products.size(); i++) {
-                System.out.println((i + 1) + ". " + products.get(i).getName() + " | " + products.get(i).getPrice() + "원 | " + products.get(i).getDescription());
-            }
-            System.out.println("0. 종료 | 프로그램 종료");
-            if (scanner.nextInt() == 0) {
-                System.out.println("커머스 프로그램을 종료합니다.");
-                break;
-            }
-        }
+        CommerceSystem system = new CommerceSystem(products);
+        system.start();
+
     }
 }
