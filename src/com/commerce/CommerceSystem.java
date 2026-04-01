@@ -18,15 +18,12 @@ public class CommerceSystem {
     public void start() {
         while (true) {
             Category category = selectCategory();
-            if (category == null) {
-                break;
-            }
+            if (category == null) break;
             while (true) {
                 Product product = selectProduct(category);
-                if (product == null) {
-                    break;
-                }
+                if (product == null) break;
                 displayProduct(product);
+                break;
             }
         }
     }
@@ -52,9 +49,9 @@ public class CommerceSystem {
         int index = 1;
         for (Product product : productList) {
             System.out.println((index++) + ". "
-                        + product.getName() + " | "
-                        + product.getPrice() + "원 | "
-                        + product.getDescription());
+                    + product.getName() + " | "
+                    + product.getPrice() + "원 | "
+                    + product.getDescription());
         }
         System.out.println("0. 뒤로가기");
         int choiceProductNumber = scanner.nextInt();
