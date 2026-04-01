@@ -19,7 +19,6 @@ public class Main {
         Product product6 = new Product("슬림컷 생지 데님 팬츠", 58000, "슬림한 라인이 돋보이는 데님", 7);
         Product product7 = new Product("오버핏 코튼 반팔 티셔츠", 29000, "탄탄한 20수 면 소재로 제작된 데일리 오버핏 티셔츠", 150);
 
-
         electronics.add(product1);
         electronics.add(product2);
         electronics.add(product3);
