@@ -2,9 +2,9 @@ package com.commerce;
 
 public class Customer {
     // 속성
-    private String name;
-    private String email;
-    private String grade;
+    private String name; // 고객명
+    private String email; // 이메일
+    private String grade; // 등급
 
     // 생성자
     public Customer(String name, String email, String grade) {
